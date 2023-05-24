@@ -14,7 +14,7 @@
 <h2>P2P Training without Serverless Computing</h2>
 The following figure show the architecture to make running a p2p training without serverless:
 
-![P2P](P2P.jpg)
+![P2P](images/P2P.jpg)
 
 
 <p> In the following, we will show all the steps to make a replication of our study</p>
@@ -115,9 +115,7 @@ EC2_without_serverless.py [--size SIZE] [--rank RANK] [--batch BATCH]
 <h2>P2P Training with Serverless Computing</h2>
 The following figure show the architecture to make running a p2p training without serverless:
 
-<img src="markdownmonstericon.png"
-     alt="Markdown Monster icon"
-     style="float: left; margin-right: 10px;" />
+![P2P](images/P2P_serverless.jpg)
 
 <p> In the following, we will show all the steps to make a replication of P2P using serverless</p>
 
