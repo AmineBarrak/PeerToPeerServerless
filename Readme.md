@@ -221,8 +221,12 @@ EC2_with_serverless.py [--size SIZE] [--rank RANK] [--batch BATCH]
 
 Please note that we removed all the credentials from the source code, where you need to replace it with your proper credentials.
 
-<h3>References</h3>
+<h3>Experimentations</h3>
+We provide the results of our experimentations in the following link:
+<a href="https://docs.google.com/spreadsheets/d/1HR97ehp7pYABvCCfYdsQkqADPyt1kJf0fxEQRHpWodc/edit?usp=sharing">Experimentations Results</a>
 
+
+<h3>References</h3>
 
 
 
