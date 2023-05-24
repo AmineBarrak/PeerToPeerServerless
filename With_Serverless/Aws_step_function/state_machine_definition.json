@@ -1,0 +1,72 @@
+{
+  "Comment": "A Step Function to execute a Lambda, then launch N Lambda functions in parallel and then calculate the average.",
+  "StartAt": "ProcessInput",
+  "States": {
+    "ProcessInput": {
+      "Type": "Task",
+      "Resource": "arn:aws:lambda:us-east-1:879538525035:function:ProcessInputFunction",
+      "Next": "ComputeGradient"
+    },
+    "ComputeGradient": {
+      "Type": "Parallel",
+      "Branches": [
+        {
+          "StartAt": "Batch1",
+          "States": {
+            "Batch1": {
+              "Type": "Task",
+              "Resource": "arn:aws:lambda:us-east-1:879538525035:function:compute_gradient",
+              "InputPath": "$.[0]",
+              "End": true
+            }
+          }
+        },
+        {
+          "StartAt": "Batch2",
+          "States": {
+            "Batch2": {
+              "Type": "Task",
+              "Resource": "arn:aws:lambda:us-east-1:879538525035:function:compute_gradient",
+              "InputPath": "$.[1]",
+              "End": true
+            }
+          }
+        },
+        {
+          "StartAt": "Batch3",
+          "States": {
+            "Batch3": {
+              "Type": "Task",
+              "Resource": "arn:aws:lambda:us-east-1:879538525035:function:compute_gradient",
+              "InputPath": "$.[2]",
+              "End": true
+            }
+          }
+        },
+        {
+          "StartAt": "Batch4",
+          "States": {
+            "Batch4": {
+              "Type": "Task",
+              "Resource": "arn:aws:lambda:us-east-1:879538525035:function:compute_gradient",
+              "InputPath": "$.[3]",
+              "End": true
+            }
+          }
+        },
+        {
+          "StartAt": "Batch5",
+          "States": {
+            "Batch5": {
+              "Type": "Task",
+              "Resource": "arn:aws:lambda:us-east-1:879538525035:function:compute_gradient",
+              "InputPath": "$.[4]",
+              "End": true
+            }
+          }
+        }
+      ],
+      "End": true
+    }
+  }
+}
